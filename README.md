@@ -107,6 +107,46 @@ cd House
 
 ---
 
+
+### Model Description
+
+1. **Dataset**:
+   - The model was trained using a dataset (`house_data.csv`) containing features related to house properties and their respective prices.
+
+2. **Features Used**:
+   - **Number of bedrooms**
+   - **Number of bathrooms**
+   - **Living area** (in square feet)
+   - **Condition of the house** (scaled from 1 to 5)
+   - **Number of schools nearby**
+
+3. **Target Variable**:
+   - **Price**: The dependent variable representing the house price.
+
+4. **Data Preprocessing**:
+   - The feature variables were scaled using **`StandardScaler`** to normalize the data. This ensures that features with varying magnitudes do not disproportionately influence the model.
+
+5. **Model Used**:
+   - **Random Forest Regressor**: A machine learning ensemble model that uses multiple decision trees to predict the target variable.
+     - **Key Parameters**:
+       - `n_estimators=100`: The model uses 100 decision trees for making predictions.
+       - `random_state=42`: Ensures reproducibility of results.
+     - **Why Random Forest**:
+       - Handles non-linear relationships well.
+       - Resistant to overfitting when tuned properly.
+       - Capable of handling feature importance, making it suitable for regression tasks like house price prediction.
+
+6. **Model Evaluation**:
+   - **R² Score (Coefficient of Determination)**:
+     - Training R² Score: Measures how well the model fits the training data.
+     - Testing R² Score: Indicates the model's predictive performance on unseen data.
+
+7. **Model Saving**:
+   - The trained model (`house_price_model.pkl`) and the scaler (`scaler.pkl`) were serialized and saved for future use. These files are located in the `backend\model` directory.
+
+---
+
+
 ## Acknowledgments
 
 This project was developed as a final year project for a school friend of mine.
