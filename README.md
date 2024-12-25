@@ -36,7 +36,7 @@ This project is a **House Price Prediction Application** developed for a **final
 ### Step 1: Clone the Repository
 Make sure you have **Git** installed on your system. Open your terminal and run:
 ```bash
-git clone <repository-url>
+git clone https://github.com/Rishiraj8/house_prediction.git
 cd House
 ```
 
